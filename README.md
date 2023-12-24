@@ -8,6 +8,16 @@ Note: This project built on older gradle version. Feel Free To Contribute
 minSdkVersion 24
 targetSdkVersion 30
 
+
+  ![Alt text]([(https://github.com/monkastro/Camera-Scanner-/blob/main/screenshots/image1.png)
+  ![Alt text](https://github.com/monkastro/Camera-Scanner-/blob/main/screenshots/image2.png)
+ ![Alt text](https://github.com/monkastro/Camera-Scanner-/blob/main/screenshots/image3.png)
+  ![Alt text](https://github.com/monkastro/Camera-Scanner-/blob/main/screenshots/image4.png)
+
+
+
+
+
 Safe Secure Fast & Free
 
 Scan, Create, Edit and Share Docs easily with document camera scanner App.
