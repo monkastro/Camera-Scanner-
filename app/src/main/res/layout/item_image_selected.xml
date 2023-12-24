@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="100dp"
+
+        android:layout_height="100dp"
+        android:layout_margin="5dp">
+        <ImageView
+            android:id="@+id/ivSelectedImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"/>
+        <ImageView
+            android:id="@+id/btnRemove"
+            android:visibility="gone"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_margin="4dp"
+            android:src="@drawable/ic_select_iamge_from_gallery_delete_icon"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.scanner.camera.phototopdf.papercamerascanner">
+
+    <uses-sdk tools:overrideLibrary="           androidx.camera.camera2, androidx.camera.core,           androidx.camera.view, androidx.camera.lifecycle" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.screen.landscape"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/a4_scanner_logo"
+        android:installLocation="auto"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/a4_scanner"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="q">
+        <activity android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.Camera_Scanner_Splash">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.common.Privacy_Policy_activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.common.ExitActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.Camera_Scanner_MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.Camera_Scanner_CreationListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.Camera_Scanner_GallaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.GenerateQRActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.QRDisplayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.IDCardPagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.Camera_Scanner_DisplayIDCardResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.Camera_Scanner_BookScanPagesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.CameraScanActivity"
+            android:screenOrientation="portrait" />
+       <!-- <activity
+            android:name=".Activity.OCRResultActivity"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.Camera_Scanner_EdgeDetectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.DrawSignatureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.MagicalEraserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.DisplayScanResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.ResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.SimpleCropView.BasicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.TextFileViwerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.Activity.Camera_Scanner_PDFViewerActivity"
+            android:screenOrientation="portrait" />
+
+
+        <provider
+            android:name="com.scanner.camera.phototopdf.papercamerascanner.HelperClass.GenericFileProvider"
+            android:authorities="com.scanner.camera.phototopdf.scanne.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/providers_paths" />
+        </provider>
+        <!--
+admob ads mainfets code here
+    <meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID"
+        android:value=""/>
+        -->
+        <activity
+            android:name="com.scanlibrary.ScanActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.scanlibrary.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="barcode" />
+
+        <activity
+            android:name="com.edwardvanraak.materialbarcodescanner.MaterialBarcodeScannerActivity"
+            android:label="@string/library_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:screenOrientation="sensorLandscape"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+    </application>
+
+</manifest>

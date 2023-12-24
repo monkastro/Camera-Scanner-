@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/llView"
+        android:padding="7dp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_margin="8dp">
+        <TextView
+            android:textSize="16dp"
+            android:textColor="@color/colorTextGrey"
+            android:id="@+id/tvFolderName"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Screenshot"
+            android:fontFamily="@font/roboto_regular"/>
+    </LinearLayout>
+</RelativeLayout>

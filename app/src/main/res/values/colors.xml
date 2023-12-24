@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blue">#ff59a9ff</color>
+    <color name="bottom_background_color">#ffc4c2bc</color>
+
+    <color name="colorAccent">@color/colorYellowMain</color>
+    <color name="colorBackground">#f3f3f3</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorDefault">#f84c44</color>
+    <color name="colorGallary">#ce00162c</color>
+    <color name="colorPrimary">#6200ee</color>
+    <color name="colorPrimaryDark">#ff455a6c</color>
+    <color name="colorSelectedTab">@color/colorTextBlue</color>
+    <color name="colorTextBlack">#2e2f32</color>
+    <color name="colorTextBlue">#003466</color>
+    <color name="colorTextGrey">#9d9d9d</color>
+    <color name="colorTransparant">#00000000</color>
+    <color name="colorUnselectedTab">#FFFF</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorYellowMain">#dfa621</color>
+
+    <color name="bg">#ff455a6c</color>
+
+    <color name="indicator_selected">#868e96</color>
+
+    <color name="orange">#ffff900d</color>
+    <color name="penRoyalBlue">#4169e1</color>
+    <color name="polygonViewCircleBackground">#90e5f8ff</color>
+    <color name="polygonViewCircleStrokeColor">#ff59a9ff</color>
+    <color name="pp_color">#563359</color>
+
+    <color name="selectedButtonColor">@color/colorYellowMain</color>
+    <color name="start_color">#ccced2</color>
+    <color name="stickerColor">#fee066</color>
+    <color name="btn_background_color">#ff19bc9c</color>
+    <color name="text_shadow">#7f000000</color>
+
+    <color name="accent_material_dark">@color/material_deep_teal_200</color>
+
+    <color name="accent_material_light">@color/material_deep_teal_500</color>
+
+    <color name="unselectedButtonColor">@color/colorTextBlue</color>
+    <color name="white">#ffffff</color>
+    <color name="zxing_custom_possible_result_points">#903a89cf</color>
+    <color name="zxing_custom_result_view">#b0000000</color>
+    <color name="zxing_custom_viewfinder_laser">#1976d2</color>
+    <color name="zxing_custom_viewfinder_mask">#60000000</color>
+    <color name="zxing_possible_result_points">#c0ffbd21</color>
+    <color name="zxing_result_view">#b0000000</color>
+    <color name="zxing_status_text">#ffffffff</color>
+    <color name="zxing_transparent">#00000000</color>
+    <color name="zxing_viewfinder_laser">#ffcc0000</color>
+    <color name="zxing_viewfinder_mask">#60000000</color>
+</resources>

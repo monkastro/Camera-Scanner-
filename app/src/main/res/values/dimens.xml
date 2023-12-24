@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="bottom_bar_padding">15dp</dimen>
+    <dimen name="indicator_default_margin">2dp</dimen>
+    <dimen name="indicator_default_size">5dp</dimen>
+    <dimen name="material_emphasis_disabled">0.38</dimen>
+    <dimen name="material_emphasis_high_type">0.87</dimen>
+    <dimen name="material_emphasis_medium">0.6</dimen>
+    <dimen name="pen_size">3dp</dimen>
+    <dimen name="polygonViewCircleWidth">32dp</dimen>
+    <dimen name="polygonViewStrokeWidth">2dp</dimen>
+    <dimen name="scanPadding">16dp</dimen>
+    <dimen name="spacing_xlarge">24dp</dimen>
+    <dimen name="thumbnail_size">70dp</dimen>
+</resources>

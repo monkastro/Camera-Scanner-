@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <item
+        android:icon="@drawable/ic_qr_code_home_page_icon"
+        android:id="@+id/qrScanner"
+        android:iconTint="@color/white"
+        android:orderInCategory="100"
+        android:title="QR Scanner"
+        app:showAsAction="always"/>
+    <!--<item
+        android:id="@+id/change_consent"
+        android:orderInCategory="100"
+        android:title="Change EU Consent"
+        app:showAsAction="never"/>-->
+    <item
+        android:id="@+id/rate"
+        android:orderInCategory="100"
+        android:title="Rate us"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/share"
+        android:orderInCategory="100"
+        android:title="Share app"
+        app:showAsAction="never"/>
+   <!-- <item
+        android:id="@+id/contact"
+        android:orderInCategory="100"
+        android:title="Contact Us"
+        app:showAsAction="never"/>-->
+    <item
+        android:id="@+id/privacy"
+        android:orderInCategory="100"
+        android:title="Privacy Policy"
+        app:showAsAction="never"/>
+</menu>

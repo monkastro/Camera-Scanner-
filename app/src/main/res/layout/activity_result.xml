@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/colorBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1">
+                <LinearLayout
+                    android:gravity="center"
+                    android:background="@color/bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.9">
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:textSize="20sp"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="left"
+                            android:id="@+id/toolbar_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Edit"
+                            android:fontFamily="@font/roboto_medium"/>
+                    </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="1">
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.15">
+                                <RelativeLayout
+                                    android:id="@+id/rel_save_bmp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+                                    <com.xiaopo.flying.sticker.StickerView
+                                        android:id="@+id/stickerView"
+                                        android:background="@android:color/transparent"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        app:borderColor="@color/stickerColor"
+                                        app:showBorder="true"
+                                        app:showIcons="true">
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+                                            <ImageView
+                                                android:id="@+id/ivCroppedResult"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:scaleType="fitXY"
+                                                android:layout_centerInParent="true"/>
+                                            <com.scanner.camera.phototopdf.papercamerascanner.CustomView.CanvasView
+                                                android:id="@+id/canvasViewDoodle"
+                                                android:visibility="gone"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"/>
+                                            <com.scanner.camera.phototopdf.papercamerascanner.CustomView.CanvasView
+                                                android:id="@+id/canvasViewHighlight"
+                                                android:visibility="gone"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"/>
+                                        </RelativeLayout>
+                                    </com.xiaopo.flying.sticker.StickerView>
+                                </RelativeLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:background="@color/colorWhite"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.85">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:id="@+id/llMainMenu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <View
+                                        android:background="#d9d9d9"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"/>
+                                    <LinearLayout
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="25dp"
+                                        android:layout_marginRight="25dp">
+                                        <LinearLayout
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:id="@+id/btnEdgeDetect"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.25">
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:src="@drawable/ic_edge_icon"/>
+                                            <TextView
+                                                android:textSize="12sp"
+                                                android:textColor="@color/colorTextBlue"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="4dp"
+                                                android:text="EDGE CROP"
+                                                android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                      <!--  <LinearLayout
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.25">
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:visibility="invisible"
+                                                android:src="@drawable/ic_filters_icon"/>
+                                            <TextView
+                                                android:textSize="12sp"
+                                                android:textColor="@color/colorTextBlue"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="4dp"
+                                                android:visibility="invisible"
+                                                android:text="FILTERS"
+                                                android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>-->
+                                        <LinearLayout
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:id="@+id/btnTools"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.25">
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:src="@drawable/ic_tooles_icon"/>
+                                            <TextView
+                                                android:textSize="12sp"
+                                                android:textColor="@color/colorTextBlue"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="4dp"
+                                                android:text="TOOLS"
+                                                android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                        <LinearLayout
+                                            android:gravity="center"
+                                            android:orientation="vertical"
+                                            android:id="@+id/buttonDone"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="0.25">
+                                            <ImageView
+                                                android:layout_width="30dp"
+                                                android:layout_height="30dp"
+                                                android:src="@drawable/ic_save_icon"/>
+                                            <TextView
+                                                android:textSize="12sp"
+                                                android:textColor="@color/colorTextBlue"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="4dp"
+                                                android:text="SAVE"
+                                                android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/llColorTool" android:background="@color/colorWhite" android:visibility="gone" android:layout_width="match_parent" android:layout_height="130dp" android:layout_alignParentBottom="true">
+                            <View android:background="#d9d9d9" android:layout_width="match_parent" android:layout_height="1dp"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.75">
+                                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                        <ImageView android:id="@+id/ivCancelColor" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginLeft="15dp" android:src="@drawable/ic_menu_cancel_icon" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Select Color" android:layout_centerInParent="true" android:fontFamily="@font/roboto_regular"/>
+                                        <ImageView android:id="@+id/ivOkColor" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/ic_menu_done_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="10dp" android:layout_weight="0.25">
+                                    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:id="@+id/rvColors" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/llFilterTool" android:background="@color/colorWhite" android:visibility="gone" android:layout_width="match_parent" android:layout_height="130dp" android:layout_alignParentBottom="true">
+                            <View android:background="#d9d9d9" android:layout_width="match_parent" android:layout_height="1dp"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.75">
+                                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                        <ImageView android:id="@+id/ivCancelFilter" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginLeft="15dp" android:src="@drawable/ic_menu_cancel_icon" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Select Filter" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium"/>
+                                        <ImageView android:id="@+id/ivOkFilter" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/ic_menu_done_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.25">
+                                    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:id="@+id/rvFilters" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/llFontTool" android:background="@color/colorWhite" android:visibility="gone" android:layout_width="match_parent" android:layout_height="130dp" android:layout_alignParentBottom="true">
+                            <View android:background="#d9d9d9" android:layout_width="match_parent" android:layout_height="1dp"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.75">
+                                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                        <ImageView android:id="@+id/ivCancelFont" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginLeft="15dp" android:src="@drawable/ic_menu_cancel_icon" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Select Font" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium"/>
+                                        <ImageView android:id="@+id/ivOkFont" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/ic_menu_done_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.25">
+                                    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:id="@+id/rvFontFamily" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/llAddText"
+                            android:background="@color/colorWhite"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_alignParentBottom="true">
+                            <View
+                                android:background="#d9d9d9"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"/>
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:weightSum="1">
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.75">
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+                                        <ImageView
+                                            android:id="@+id/ivCancelAddText"
+                                            android:layout_width="17dp"
+                                            android:layout_height="17dp"
+                                            android:layout_marginLeft="15dp"
+                                            android:src="@drawable/ic_menu_cancel_icon"
+                                            android:layout_centerVertical="true"
+                                            android:layout_alignParentStart="true"/>
+                                        <TextView
+                                            android:textSize="14sp"
+                                            android:textColor="@color/colorTextBlue"
+                                            android:id="@+id/tvAddText"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:text="Add Text"
+                                            android:layout_centerInParent="true"
+                                            android:fontFamily="@font/roboto_medium"/>
+                                        <ImageView
+                                            android:id="@+id/ivOkAddText"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginRight="15dp"
+                                            android:src="@drawable/ic_menu_done_icon"
+                                            android:layout_centerVertical="true"
+                                            android:layout_alignParentEnd="true"/>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_weight="0.25">
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:id="@+id/btnAddTextS"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:minWidth="110dp">
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:src="@drawable/ic_add_text_icon"/>
+                                        <TextView
+                                            android:textSize="12sp"
+                                            android:textColor="@color/colorTextBlue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="Add Text"
+                                            android:fontFamily="@font/roboto_medium"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:id="@+id/btnAddColor"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:minWidth="110dp">
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:src="@drawable/ic_color_icon"/>
+                                        <TextView
+                                            android:textSize="12sp"
+                                            android:textColor="@color/colorTextBlue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="Font Color"
+                                            android:fontFamily="@font/roboto_medium"/>
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:gravity="center"
+                                        android:orientation="vertical"
+                                        android:id="@+id/btnAddFont"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="15dp"
+                                        android:minWidth="110dp">
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:src="@drawable/ic_font_style_icon"/>
+                                        <TextView
+                                            android:textSize="12sp"
+                                            android:textColor="@color/colorTextBlue"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:text="Font Style"
+                                            android:fontFamily="@font/roboto_medium"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/horiHighlight"
+                            android:background="@color/colorWhite"
+                            android:visibility="gone" android:layout_width="match_parent" android:layout_height="110dp" android:layout_alignParentBottom="true">
+                            <View android:background="#d9d9d9" android:layout_width="match_parent" android:layout_height="1dp"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.75">
+                                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                        <ImageView android:id="@+id/ivCancelHighlight" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginLeft="15dp" android:src="@drawable/ic_menu_cancel_icon" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Highlights" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium"/>
+                                        <ImageView android:id="@+id/ivOkHighlight" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/ic_menu_done_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_weight="0.25">
+                                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="25dp" android:layout_marginRight="25dp" android:weightSum="1">
+                                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnHBrush" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.25">
+                                            <ImageView android:id="@+id/ivHBrush" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_highlight_icon"/>
+                                            <TextView android:textSize="12sp" android:textColor="@color/colorTextBlue" android:id="@+id/tvHBrush" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Highlight" android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnHEraser" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.25">
+                                            <ImageView android:id="@+id/ivHEraser" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_eraser_icon"/>
+                                            <TextView android:textSize="12sp" android:textColor="@color/colorTextBlue" android:id="@+id/tvHEraser" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Eraser" android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnHBrushSize" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.25">
+                                            <ImageView android:id="@+id/ivHBrushSize" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_size_icon"/>
+                                            <TextView android:textSize="12sp" android:textColor="@color/colorTextBlue" android:id="@+id/tvHBrushSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Size" android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnHColor" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.25">
+                                            <ImageView android:id="@+id/ivHColor" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_color_icon"/>
+                                            <TextView android:textSize="12sp" android:textColor="@color/colorTextBlue" android:id="@+id/tvHColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Color" android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/horiDoodle" android:background="@color/colorWhite" android:visibility="gone" android:layout_width="match_parent" android:layout_height="110dp" android:layout_alignParentBottom="true">
+                            <View android:background="#d9d9d9" android:layout_width="match_parent" android:layout_height="1dp"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.75">
+                                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                        <ImageView android:id="@+id/ivCancelDoodle" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginLeft="15dp" android:src="@drawable/ic_menu_cancel_icon" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Doodle" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium"/>
+                                        <ImageView android:id="@+id/ivOkDoodle" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/ic_menu_done_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_weight="0.25">
+                                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnDBrush" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.2">
+                                            <ImageView android:id="@+id/ivDBrush" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_doodle_icon"/>
+                                            <TextView android:textSize="12sp" android:textColor="@color/colorTextBlue" android:id="@+id/tvDBrush" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Doodle" android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnDEraser" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.2">
+                                            <ImageView android:id="@+id/ivDEraser" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_eraser_icon"/>
+                                            <TextView android:textSize="12sp" android:textColor="@color/colorTextBlue" android:id="@+id/tvDEraser" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Eraser" android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnDBrushSize" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.2">
+                                            <ImageView android:id="@+id/ivDBrushSize" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_size_icon"/>
+                                            <TextView android:textSize="12sp" android:textColor="@color/colorTextBlue" android:id="@+id/tvDBrushSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Size" android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnDColor" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.2">
+                                            <ImageView android:id="@+id/ivDColor" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_color_icon"/>
+                                            <TextView android:textSize="12sp" android:textColor="@color/colorTextBlue" android:id="@+id/tvDColor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Color" android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnDColorPicker" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.2">
+                                            <ImageView android:id="@+id/ivDColorPicker" android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_color_picker_icon"/>
+                                            <TextView android:textSize="12sp" android:textColor="@color/colorTextBlue" android:id="@+id/tvDColorPicker" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Color" android:fontFamily="@font/roboto_medium"/>
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/llBrushSize" android:background="@color/colorWhite" android:visibility="gone" android:layout_width="match_parent" android:layout_height="110dp" android:layout_alignParentBottom="true">
+                            <View android:background="#d9d9d9" android:layout_width="match_parent" android:layout_height="1dp"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.75">
+                                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                        <ImageView android:id="@+id/ivCancelSize" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginLeft="15dp" android:src="@drawable/ic_menu_cancel_icon" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Size" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium"/>
+                                        <ImageView android:id="@+id/ivOkSize" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/ic_menu_done_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.25">
+                                    <SeekBar android:id="@+id/sbBrushSize" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" android:progress="15" android:progressTint="@color/colorTextBlue" android:thumbTint="@color/colorTextBlue"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/llAdjustment" android:background="@color/colorWhite" android:visibility="gone" android:layout_width="match_parent" android:layout_height="110dp" android:layout_alignParentBottom="true">
+                            <View android:background="#d9d9d9" android:layout_width="match_parent" android:layout_height="1dp"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.75">
+                                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                        <ImageView android:id="@+id/ivCancelAdjust" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginLeft="15dp" android:src="@drawable/ic_menu_cancel_icon" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Adjustment" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium"/>
+                                        <ImageView android:id="@+id/ivOkAdjustment" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/ic_menu_done_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.25">
+                                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnAddContrast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="130dp">
+                                        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_contrass_icon"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Contrast" android:fontFamily="@font/roboto_medium"/>
+                                    </LinearLayout>
+                                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/btnAddBrightness" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="130dp">
+                                        <ImageView android:layout_width="30dp" android:layout_height="30dp" android:src="@drawable/ic_brightness_icon"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Brightness" android:fontFamily="@font/roboto_medium"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/llContrast" android:background="@color/colorWhite" android:visibility="gone" android:layout_width="match_parent" android:layout_height="110dp" android:layout_alignParentBottom="true">
+                            <View android:background="#d9d9d9" android:layout_width="match_parent" android:layout_height="1dp"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.75">
+                                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                        <ImageView android:id="@+id/ivCancelContrast" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginLeft="15dp" android:src="@drawable/ic_menu_cancel_icon" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:id="@+id/tvAdjust" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Contrast" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium"/>
+                                        <ImageView android:id="@+id/ivOkContrast" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/ic_menu_done_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.25">
+                                    <SeekBar android:id="@+id/sbBrightness" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="255" android:progress="0" android:layout_alignParentBottom="true" android:progressTint="@color/colorTextBlue" android:thumbTint="@color/colorTextBlue"/>
+                                    <SeekBar android:id="@+id/sbContrast" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" android:progress="1" android:layout_alignParentBottom="true" android:progressTint="@color/colorTextBlue" android:thumbTint="@color/colorTextBlue"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@+id/llStickers" android:background="@color/colorWhite" android:visibility="gone" android:layout_width="match_parent" android:layout_height="120dp" android:layout_alignParentBottom="true">
+                            <View android:background="#d9d9d9" android:layout_width="match_parent" android:layout_height="1dp"/>
+                            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+                                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.75">
+                                    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                                        <ImageView android:id="@+id/ivCancelSticker" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginLeft="15dp" android:src="@drawable/ic_menu_cancel_icon" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                                        <TextView android:textSize="14sp" android:textColor="@color/colorTextBlue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Stickers" android:layout_centerInParent="true" android:fontFamily="@font/roboto_medium"/>
+                                        <ImageView android:id="@+id/ivOkSticker" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/ic_menu_done_icon" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.25">
+                                    <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:id="@+id/rvStickers" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+       </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <item
+        android:id="@+id/mEdit"
+        android:orderInCategory="100"
+        android:title="Edit"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/mRename"
+        android:orderInCategory="100"
+        android:title="Rename"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/mDelete"
+        android:orderInCategory="100"
+        android:title="Delete"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/mshare"
+        android:orderInCategory="100"
+        android:title="Share"
+        app:showAsAction="never"/>
+   <!-- <item
+        android:id="@+id/mOCR"
+        android:orderInCategory="100"
+        android:title="OCR Text"
+        app:showAsAction="never"/>-->
+</menu>
